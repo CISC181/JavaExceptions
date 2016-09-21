@@ -25,25 +25,28 @@ public class Person {
 	public String getFirstName() {
 		return FirstName;
 	}
-	public void setFirstName(String firstName) {
+	public Person setFirstName(String firstName) {
 		FirstName = firstName;
+		return this;
 	}
 	public String getMiddleName() {
 		return MiddleName;
 	}
-	public void setMiddleName(String middleName) {
+	public Person setMiddleName(String middleName) {
 		MiddleName = middleName;
+		return this;
 	}
 	public String getLastName() {
 		return LastName;
 	}
-	public void setLastName(String lastName) {
+	public Person setLastName(String lastName) {
 		LastName = lastName;
+		return this;
 	}
 	public String getPhoneNbr() {
 		return PhoneNbr;
 	}
-	public void setPhoneNbr(String PhoneNbr) throws PersonException {
+	public Person setPhoneNbr(String PhoneNbr) throws PersonException {
 
 		this.PhoneNbr = PhoneNbr;
 		String regex = "^\\({1}([0-9]{3})\\){1}-{1}([0-9]{3})-{1}([0-9]{4})$";
@@ -52,7 +55,7 @@ public class Person {
 		if (!b) {
 			throw new PersonException(this, "Phone Nbr Bad");
 		} 
-		
+		return this;
 	}
 	
 	
